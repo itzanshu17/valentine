@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Love Note</title>
+    <style>
+        body {
+            font-family: 'Cursive', sans-serif;
+            background-color: #ffe6e6;
+            text-align: center;
+            padding: 50px;
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 100vh;
+        }
+        .note-container {
+            background: url('image5.webp') no-repeat center center;
+            background-size: cover;
+            padding: 30px;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 0px 0px 15px rgba(253, 237, 237, 0.2);
+            max-width: 80%;
+            width: 600px;
+            text-align: left;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #5a3e36;
+            text-align: center;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #c00606;
+        }
+        .floating-symbol {
+            position: absolute;
+            font-size: 24px;
+            animation: float 4s infinite ease-in-out;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); opacity: 1; }
+            50% { transform: translateY(-20px); opacity: 0.8; }
+            100% { transform: translateY(0px); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="note-container">
+        <h1>My Dearest Love ❤️</h1>
+        <p>
+            I love you, and I want you to be my Valentine for life and beyond. 
+            I want to spend my life with you, Ishika. I don’t know who I am 
+            without you or what I would do without you. I know this long distance
+            is hard, but it gives me a little peace to know that you are here for me. 
+            I know the wait is the hardest part—you can’t see your partner whenever
+            you want—but I would rather be in a long-distance relationship with you
+            than be with anyone else in this universe.💖
+        </p>
+        <p>
+            Believe me when I say I am very serious about you, and this feeling grows stronger 
+            with every second. No matter how many times we fight or get frustrated with each other,
+            I believe we will always come out stronger because I won’t let you go. I will fight for 
+            us until my last breath. 💖💖
+        </p>
+        <p>
+            I know that what we have is special. One day, we won’t have to count the days until we see 
+            each other—we will wake up next to each other every morning, forever. Until then, I promise 
+            to love you endlessly and cherish every moment we share.💖💖💖
+        </p>
+        <p style="text-align: right; font-style: italic;">
+            Your nona<br>
+            Anshika Sharma 💋
+        </p>
+    </div>
+    <script>
+        function createFloatingSymbol() {
+            let symbols = ["❤️", "💋"];
+            let symbol = document.createElement("div");
+            symbol.classList.add("floating-symbol");
+            symbol.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+            symbol.style.left = Math.random() * window.innerWidth + "px";
+            symbol.style.top = Math.random() * window.innerHeight + "px";
+            document.body.appendChild(symbol);
+            setTimeout(() => { symbol.remove(); }, 4000);
+        }
+        setInterval(createFloatingSymbol, 500);
+    </script>
+</body>
+</html>

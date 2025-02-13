@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6e6;
+            text-align: center;
+            margin: 0;
+            padding: 50px;
+        }
+        .container {
+            background: #ff4d6d;
+            color: white;
+            padding: 50px;
+            border-radius: 10px;
+            display: inline-block;
+            position: center;
+        }
+        .btn {
+            background: white;
+            color: #ff4d6d;
+            border: none;
+            padding: 15px 25px;
+            margin: 10px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #ffccd5;
+        }
+        .photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            margin-bottom: 20px;
+        }
+        .heart {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 24px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart">❤️</div>
+        <img src="rose.jpg" alt="Our Photo" class="photo">
+        <h1>Will you be my Valentine? ❤️</h1>
+        <button class="btn" onclick="sayLove()">Yes</button>
+        <button class="btn" onclick="askAgain()">No</button>
+        <p id="response"></p>
+    </div>
+    <script>
+        function sayLove() {
+            window.location.href = "yes.html";
+        }
+        function askAgain() {
+    let responseDiv = document.getElementById('response');
+    responseDiv.innerHTML = `
+        <p style="font-size: 20px; color: white;">Please please please pleaseeeeee be my Valentine! ❤️</p>
+        <img src="gif1.gif" alt="Please Gif" style="width: 250px; border-radius: 10px; margin-top: 10px;">
+    `;
+}
+
+        // function askAgain() {
+        //     document.getElementById('response').innerText = "Think again... Will you be my Valentine? ❤️";
+        // }
+    </script>
+    <!-- <script>
+        function sayLove() {
+            document.getElementById('response').innerText = "I love you too! ❤️";
+        }
+        function askAgain() {
+            document.getElementById('response').innerText = "Think again... Will you be my Valentine? ❤️";
+        }
+    </script> -->
+</body>
+</html>
